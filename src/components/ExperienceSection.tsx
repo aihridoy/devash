@@ -39,22 +39,26 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-white dark:bg-gray-900">
-      <div className="container mx-auto px-4">
+    <section id="experience" className="py-20 bg-white dark:bg-gray-900 relative overflow-hidden">
+      {/* Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-50/50 to-pink-50/50 dark:from-gray-800/50 dark:to-purple-900/50"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 text-center animate-fade-in">
             Work Experience
           </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-12 rounded-full"></div>
           
           <div className="space-y-8">
             {experiences.map((exp, index) => (
-              <div key={index} className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div key={index} className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                       {exp.title}
                     </h3>
-                    <p className="text-xl text-blue-600 dark:text-blue-400 mb-1">
+                    <p className="text-xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-1">
                       {exp.company}
                     </p>
                     <p className="text-gray-600 dark:text-gray-400">
@@ -62,7 +66,7 @@ const ExperienceSection = () => {
                     </p>
                   </div>
                   <div className="mt-4 md:mt-0">
-                    <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="inline-block bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-semibold">
                       {exp.period}
                     </span>
                   </div>
@@ -71,7 +75,7 @@ const ExperienceSection = () => {
                 <div className="space-y-3">
                   {exp.responsibilities.map((responsibility, idx) => (
                     <div key={idx} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mt-2 flex-shrink-0"></div>
                       <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                         {responsibility}
                       </p>
