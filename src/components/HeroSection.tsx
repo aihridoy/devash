@@ -28,7 +28,7 @@ const HeroSection = () => {
         <div className="text-center max-w-4xl mx-auto">
           <div className="mb-8 animate-fade-in">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
+              src="https://i.ibb.co/hF1sQqB0/dp.jpg"
               alt="Ashraful Islam"
               className="w-48 h-48 rounded-full mx-auto mb-8 border-8 border-white dark:border-gray-700 shadow-2xl transform hover:scale-105 transition-all duration-500"
             />
