@@ -9,7 +9,7 @@ const SkillsSection = () => {
     "Tailwind CSS",
     "Node.js",
     "Redux",
-    "GraphQL",
+    "Rest API",
     "MongoDB",
     "Git & GitHub",
     "Sass/SCSS"
