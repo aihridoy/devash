@@ -105,39 +105,27 @@ const ProjectsSection = () => {
       id="projects"
       className="py-20 bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/30 dark:from-gray-900 dark:via-gray-800/50 dark:to-purple-900/20 relative overflow-hidden"
     >
-      {/* Animated Background Elements */}
+      {/* Simplified Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-300/10 dark:bg-blue-500/5 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-300/10 dark:bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-indigo-300/5 dark:bg-indigo-500/3 rounded-full blur-3xl animate-pulse delay-2000"></div>
-      </div>
-
-      {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05]">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgb(0 0 0) 1px, transparent 0)`,
-          backgroundSize: '40px 40px'
-        }}></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-7xl mx-auto">
-          {/* Enhanced Header */}
-          <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          {/* Header with Smooth Transition */}
+          <div className={`text-center mb-16 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 px-4 py-2 rounded-full mb-6">
               <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
               <span className="text-sm font-medium text-blue-700 dark:text-blue-300">Portfolio Showcase</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
               Featured Projects
             </h2>
             
             <div className="flex justify-center mb-8">
-              <div className="relative">
-                <div className="w-32 h-1.5 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full"></div>
-                <div className="absolute -top-1 left-0 w-4 h-3.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full animate-pulse"></div>
-              </div>
+              <div className="w-32 h-1.5 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full"></div>
             </div>
             
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -145,52 +133,47 @@ const ProjectsSection = () => {
             </p>
           </div>
 
-          {/* Enhanced Project Grid */}
+          {/* Project Grid with Consistent Image Sizing */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
             {projects.slice(0, 4).map((project, index) => (
               <div
                 key={index}
-                className={`group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-200/50 dark:border-gray-700/50 ${
+                className={`group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 ease-out border border-gray-200/50 dark:border-gray-700/50 ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
-                style={{ transitionDelay: `${index * 200}ms` }}
+                style={{ transitionDelay: `${index * 150}ms` }}
                 onMouseEnter={() => setHoveredProject(index)}
                 onMouseLeave={() => setHoveredProject(null)}
               >
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4 z-20">
-                  <span className={`inline-flex items-center px-3 py-1.5 rounded-full text-xs font-bold text-white bg-gradient-to-r ${categoryColors[project.category] || 'from-gray-500 to-gray-600'} shadow-lg transition-transform duration-300 group-hover:scale-105`}>
+                  <span className={`inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold text-white bg-gradient-to-r ${categoryColors[project.category] || 'from-gray-500 to-gray-600'} transition-all duration-300 ease-out`}>
                     {project.category}
                   </span>
                 </div>
 
-                {/* Project Image */}
+                {/* Consistent Image Container */}
                 <div className="relative overflow-hidden h-64">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-opacity duration-500 group-hover:opacity-80"></div>
-                  
-                  {/* Hover Overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-t from-blue-900/60 via-purple-900/30 to-transparent transition-opacity duration-500 ${
-                    hoveredProject === index ? 'opacity-100' : 'opacity-0'
-                  }`}></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent transition-opacity duration-500 ease-out group-hover:opacity-60"></div>
 
-                  {/* Stats Overlay */}
-                  <div className={`absolute top-4 right-4 flex gap-2 transition-all duration-500 ${
+                  {/* Minimal Stats Overlay */}
+                  <div className={`absolute top-4 right-4 flex gap-2 transition-all duration-500 ease-out ${
                     hoveredProject === index ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
                   }`}>
-                    <div className="flex items-center gap-1 bg-black/30 backdrop-blur-sm rounded-full px-2.5 py-1.5 border border-white/20">
+                    <div className="flex items-center gap-1 bg-black/20 backdrop-blur-sm rounded-full px-2 py-1">
                       <Star size={12} className="text-yellow-400" />
                       <span className="text-xs text-white font-medium">{project.stats.stars}</span>
                     </div>
-                    <div className="flex items-center gap-1 bg-black/30 backdrop-blur-sm rounded-full px-2.5 py-1.5 border border-white/20">
+                    <div className="flex items-center gap-1 bg-black/20 backdrop-blur-sm rounded-full px-2 py-1">
                       <GitFork size={12} className="text-blue-400" />
                       <span className="text-xs text-white font-medium">{project.stats.forks}</span>
                     </div>
-                    <div className="flex items-center gap-1 bg-black/30 backdrop-blur-sm rounded-full px-2.5 py-1.5 border border-white/20">
+                    <div className="flex items-center gap-1 bg-black/20 backdrop-blur-sm rounded-full px-2 py-1">
                       <Eye size={12} className="text-green-400" />
                       <span className="text-xs text-white font-medium">{project.stats.views}</span>
                     </div>
@@ -198,63 +181,55 @@ const ProjectsSection = () => {
                 </div>
 
                 {/* Project Content */}
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 transition-colors duration-300 ease-out group-hover:text-blue-600 dark:group-hover:text-blue-400">
                     {project.title}
                   </h3>
                   
-                  <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed text-sm">
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed">
                     {project.description}
                   </p>
 
                   {/* Technologies */}
-                  <div className="flex flex-wrap gap-2 mb-8">
+                  <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="relative px-3 py-1.5 rounded-full text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 group-hover:bg-gradient-to-r group-hover:from-blue-100 group-hover:to-purple-100 dark:group-hover:from-blue-900 dark:group-hover:to-purple-900 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-all duration-300 border border-gray-200/50 dark:border-gray-600/50"
+                        className="px-2 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 transition-all duration-300 ease-out group-hover:bg-blue-100 dark:group-hover:bg-blue-900 group-hover:text-blue-700 dark:group-hover:text-blue-300"
                       >
                         {tech}
-                        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </span>
                     ))}
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex gap-4">
+                  <div className="flex gap-3">
                     <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group/btn relative flex items-center gap-3 bg-gradient-to-r from-gray-800 to-gray-900 dark:from-gray-700 dark:to-gray-800 text-white px-6 py-3 rounded-xl hover:from-gray-700 hover:to-gray-800 dark:hover:from-gray-600 dark:hover:to-gray-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg font-medium"
+                      className="flex items-center gap-2 bg-gray-800 dark:bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-all duration-300 ease-out text-sm font-medium"
                     >
-                      <Github size={18} className="group-hover/btn:-rotate-6 transition-transform duration-300" />
-                      <span>View Code</span>
-                      <div className="absolute inset-0 bg-white/10 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+                      <Github size={16} />
+                      View Code
                     </a>
                     
                     <a
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group/btn relative flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg font-medium"
+                      className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all duration-300 ease-out text-sm font-medium"
                     >
-                      <ExternalLink size={18} className="group-hover/btn:rotate-6 transition-transform duration-300" />
-                      <span>Live Demo</span>
-                      <div className="absolute inset-0 bg-white/10 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+                      <ExternalLink size={16} />
+                      Live Demo
                     </a>
                   </div>
-                </div>
-
-                {/* Animated Border */}
-                <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500/30 to-purple-500/30"></div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Enhanced CTA Button */}
+          {/* CTA Button */}
           <div className={`text-center transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <button
               onClick={handleViewAllProjects}
