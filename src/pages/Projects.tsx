@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Github, ExternalLink, Star, Eye, GitFork, Filter, Search, ArrowUp, Code, Palette, Globe } from "lucide-react";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
@@ -129,7 +131,9 @@ const Projects = () => {
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/30 dark:from-gray-900 dark:via-gray-800/50 dark:to-purple-900/20 transition-colors duration-300">
+        <Header />
+
+        <div className="min-h-screen mt-5 bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/30 dark:from-gray-900 dark:via-gray-800/50 dark:to-purple-900/20 transition-colors duration-300">
           <div className="fixed inset-0 overflow-hidden pointer-events-none">
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-300/10 dark:bg-blue-500/5 rounded-full blur-3xl animate-pulse"></div>
             <div className="absolute top-1/4 -left-40 w-96 h-96 bg-purple-300/10 dark:bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -334,6 +338,8 @@ const Projects = () => {
             <ArrowUp size={20} />
           </button>
         </div>
+
+        <Footer />
       </div>
     </ThemeProvider>
   );
