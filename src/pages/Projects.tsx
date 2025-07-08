@@ -29,7 +29,7 @@ const Projects = () => {
       image: "/airbnb.png",
       technologies: ["Next.js", "Tailwind CSS", "Pdflib", "Resend", "MongoDB", "Mongoose", "Rest API", "Next Auth"],
       githubUrl: "https://github.com/aihridoy/airbnb",
-      liveUrl: "https://airbnb-seven-theta.vercel.app/",
+      liveUrl: "https://airbnb-gold-nine.vercel.app",
       category: "Travel & Booking",
       stats: { stars: 31, forks: 12, views: 203 }
     },
