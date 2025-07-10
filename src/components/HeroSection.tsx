@@ -2,7 +2,7 @@ import React from "react";
 import { Download, Github, Linkedin } from "lucide-react";
 
 const RESUME_URL =
-  "https://drive.google.com/file/d/12XDgUbnRMQ4WNyR1RygGG80gxorAT2XJ/view";
+  "https://drive.google.com/file/d/11dFIgLIVXsJLlOFtsoodUZW3Dfmi722C/view";
 
 const HeroSection = () => {
   const handleDownloadResume = () => {
@@ -39,7 +39,7 @@ const HeroSection = () => {
           </h1>
 
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white mb-6 animate-fade-in">
-            Frontend Developer
+            Full Stack Developer
           </h2>
 
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed animate-fade-in">
