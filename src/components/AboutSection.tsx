@@ -30,7 +30,7 @@ const AboutSection = () => {
                   <div className="relative">
                     <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-blue-600 to-purple-600 rounded-full"></div>
                     <p className="text-lg text-gray-700 dark:text-gray-200 leading-relaxed pl-6">
-                      I'm a passionate Frontend Developer with extensive experience in modern web technologies. 
+                      I'm a passionate Full Stack Developer with extensive experience in modern web technologies. 
                       My journey in software development has been driven by a love for creating intuitive, 
                       responsive, and user-friendly applications.
                     </p>
@@ -39,7 +39,7 @@ const AboutSection = () => {
                   <div className="relative">
                     <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-purple-600 to-pink-600 rounded-full"></div>
                     <p className="text-lg text-gray-700 dark:text-gray-200 leading-relaxed pl-6">
-                      With expertise in React.js, Next.js, and modern CSS frameworks, I specialize in 
+                      With expertise in MERN Stack, Next.js, and modern frameworks, I specialize in 
                       building scalable web applications that deliver exceptional user experiences. 
                       I'm constantly learning and adapting to new technologies to stay at the forefront 
                       of web development.

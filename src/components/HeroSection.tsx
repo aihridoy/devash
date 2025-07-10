@@ -43,9 +43,9 @@ const HeroSection = () => {
           </h2>
 
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed animate-fade-in">
-            Passionate about creating exceptional digital experiences with
-            modern web technologies. Specializing in React, Next.js, and
-            building scalable front-end solutions.
+            Driven by problem-solving and continuous
+            learning, with solid experience in programming, best practices, and
+            development methodologies.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12 animate-fade-in">
