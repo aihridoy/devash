@@ -4,7 +4,7 @@ const SkillsSection = () => {
   const technicalSkills = [
     "React.js",
     "Next.js", 
-    "JavaScript/TypeScript",
+    "JavaScript",
     "Tailwind CSS",
     "Node.js",
     "Redux",
@@ -130,7 +130,7 @@ const SkillsSection = () => {
                       </h4>
                     </div>
                     <div className="flex flex-wrap gap-3">
-                      {["Ant Design", "Express.js", "Figma", "REST APIs", "Solidity", "Web3.js", "Ethereum"].map((tech, index) => (
+                      {["Ant Design", "Express.js", "Figma", "REST APIs", "TypeScript", "Solidity", "Web3.js", "Ethereum"].map((tech, index) => (
                         <span
                           key={index}
                           className="backdrop-blur-sm bg-white/40 dark:bg-white/10 border border-white/30 dark:border-white/20 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-full text-sm font-medium hover:scale-105 hover:bg-white/60 dark:hover:bg-white/20 transition-all duration-200 cursor-default"
